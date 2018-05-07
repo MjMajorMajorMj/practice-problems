@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>One to Multi</title>
+    <script>
+
+        var outputArray = [];
+        var groupArray = function(inputArray) {
+            var stringArray = [];
+            var numArray = [];
+            var booleanArray = [];
+            for (var arrayCount = 0; arrayCount < inputArray.length; arrayCount++) {
+                if (typeof inputArray[arrayCount] === "string") {
+                    stringArray.push(inputArray[arrayCount]);
+                } else if (typeof inputArray[arrayCount] === "number") {
+                    numArray.push(inputArray[arrayCount]);
+                } else if (typeof inputArray[arrayCount] === "boolean") {
+                    booleanArray.push(inputArray[arrayCount]);
+                } else {
+                    console.log("can not compute")
+                };
+            };
+            outputArray.push(stringArray, numArray, booleanArray)
+            return outputArray;
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
