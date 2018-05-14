@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Numeric Toggles P15</title>
+    <script>
+        function numeric_toggles(theNumber) {
+            var numberTog = theNumber;
+            var outputArray = [];
+            for (var i=0; i<8; i++) {
+                if (i<2) {
+                    numberTog = numberTog + 2;
+                    outputArray.push(numberTog);
+                } else if (i<4) {
+                    if (numberTog > 0) {
+                        numberTog = numberTog * -1
+                    }
+                    numberTog = numberTog - 3;
+                    outputArray.push(numberTog);
+                } else if (i<6) {
+                    if (numberTog < 0) {
+                        numberTog = numberTog * -1
+                    }
+                    numberTog = numberTog + 4;
+                    outputArray.push(numberTog);
+                } else if (i<8) {
+                    if (numberTog > 0) {
+                        numberTog = numberTog * -1
+                    }
+                    numberTog = numberTog - 5;
+                    outputArray.push(numberTog);
+                }
+            }
+            return outputArray;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
